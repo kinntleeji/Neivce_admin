@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Neivce_admin.Views.AddUpdateStudent"
+             Title="AddUpdateStudent">
+    <ScrollView Margin="20">
+        <StackLayout>
+            <Entry Placeholder="Student ID" Text="{Binding AdminDetail.StudentID}" />
+            <Entry Placeholder="English Name" Text="{Binding AdminDetail.EnglishName}"  />
+            <Entry Placeholder="Week 1" Text="{Binding AdminDetail.week[0]}"  />
+            <Entry Placeholder="Week 2" Text="{Binding AdminDetail.week[1]}"  />
+            <Entry Placeholder="Week 3" Text="{Binding AdminDetail.week[2]}"  />
+            <Entry Placeholder="Week 4" Text="{Binding AdminDetail.week[3]}"  />
+            <Entry Placeholder="Week 5" Text="{Binding AdminDetail.week[4]}"  />
+            <Entry Placeholder="Week 6" Text="{Binding AdminDetail.week[5]}"  />
+            <Entry Placeholder="Week 7" Text="{Binding AdminDetail.week[6]}"  />
+            <Entry Placeholder="Week 8" Text="{Binding AdminDetail.week[7]}"  />
+            <Entry Placeholder="Week 9" Text="{Binding AdminDetail.week[8]}"  />
+            <Entry Placeholder="Week 10" Text="{Binding AdminDetail.week[9]}"  />
+            <Entry Placeholder="Week 11" Text="{Binding AdminDetail.week[10]}"  />
+            <Entry Placeholder="Week 12" Text="{Binding AdminDetail.week[11]}"  />
+            <Entry Placeholder="Week 13" Text="{Binding AdminDetail.week[12]}"  />
+            <Entry Placeholder="Week 14" Text="{Binding AdminDetail.week[13]}"  />
+
+            <Button Text="Save Details" Command="{Binding SaveStudentCommand}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

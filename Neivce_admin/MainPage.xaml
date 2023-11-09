@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Neivce_admin.ViewModels"
+             x:Class="Neivce_admin.MainPage">
+
+    <ContentPage.Content>
+        <Grid
+        BackgroundColor="#1C375C"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" HorizontalOptions="Center">
+                <Image
+                Margin="0,30"
+                Aspect="AspectFit"
+                HeightRequest="100"
+                Source="dotnet_bot.svg"
+                WidthRequest="80" />
+            </StackLayout>
+
+            <Frame
+            Grid.Row="1"
+            Margin="0,0,0,-40"
+            BorderColor="#1C375C"
+            CornerRadius="50"
+            HasShadow="True"
+            HeightRequest="700">
+                <Grid
+                Padding="20,50,20,0"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="20"
+                VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    FontSize="24"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Welcome Back!"
+                    TextColor="#1C375C" />
+                    <Label
+                    Grid.Row="1"
+                    Margin="0,-15,0,0"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Login in to account"
+                    TextColor="#1C375C" />
+                    <Label Grid.Row="2" Text="{Binding Source={x:Reference suCopicker}, Path=SelectedItem}" HorizontalOptions="Center" />
+                    <Picker x:Name="suCopicker"
+                        Title="Select Program Subject Code" Grid.Row="3" HorizontalOptions="Center" SelectedItem="{Binding selected}" SelectedIndexChanged="suCopicker_SelectedIndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Sheet1</x:String>
+                                <x:String>Sheet2</x:String>
+                                <x:String>Sheet3</x:String>
+                                <x:String>Sheet4</x:String>
+                                <x:String>Sheet5</x:String>
+                                <x:String>Sheet6</x:String>
+                                <x:String>Admin</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Entry
+                    Grid.Row="4"
+                    Margin="0,20,0,0"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Teacher Name"
+                    Text="{Binding EnglishName}"
+                    VerticalOptions="FillAndExpand" />
+                    <Entry
+                    Grid.Row="5"
+                    HorizontalOptions="FillAndExpand"
+                    IsPassword="True"
+                    Placeholder="Password"
+                    Text="{Binding PasswordT}"
+                    VerticalOptions="FillAndExpand" />
+
+                    <Button
+                     Grid.Row="6"
+                     BackgroundColor="#2196F3"
+                     TextColor="#fffafa"
+                     Command="{Binding LoginBtn}"
+                     CornerRadius="20"
+                     Text="Login" />
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

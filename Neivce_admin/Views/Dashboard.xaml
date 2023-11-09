@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Neivce_admin.Views.Dashboard"
+             Title="Dashboard">
+    <ScrollView Margin="20">
+        <VerticalStackLayout
+                Spacing="25"
+                Padding="30,0"
+                VerticalOptions="Center">
+            <Label x:Name="lbltecher" Text="Hello, World!" HorizontalOptions="Center" FontSize="32"/>
+            <StackLayout x:Name="Page1" IsVisible="false">
+                <Label x:Name="lblcode" IsVisible="false" Text="Hello, World!" HorizontalOptions="Center" FontSize="40" TextColor="#77d065"/>
+                <Label Text="{Binding Source={x:Reference suCopicker}, Path=SelectedItem}" HorizontalOptions="Center" />
+                <Picker x:Name="weekpick"
+                    Title="Select Week" HorizontalOptions="Center" SelectedIndexChanged="OnPickerSubjectgetIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Select</x:String>
+                            <x:String>week1</x:String>
+                            <x:String>week2</x:String>
+                            <x:String>week3</x:String>
+                            <x:String>week4</x:String>
+                            <x:String>week5</x:String>
+                            <x:String>week6</x:String>
+                            <x:String>week7</x:String>
+                            <x:String>week8</x:String>
+                            <x:String>week9</x:String>
+                            <x:String>week10</x:String>
+                            <x:String>week11</x:String>
+                            <x:String>week12</x:String>
+                            <x:String>week13</x:String>
+                            <x:String>week14</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button BackgroundColor="#bf94e4" TextColor="#fffafa" Clicked="CopyOnClicked" Margin="0,20,15,5" CornerRadius="20" Text="Copy" />
+                <Button BackgroundColor="#c80815" Clicked="logoutWOnClicked" Margin="0,20,15,5" CornerRadius="20" Text="Logout" />
+            </StackLayout>
+
+            <StackLayout x:Name="Page2" IsVisible="false">
+                <Picker x:Name="adsupicker"
+                    Title="Select Program Subject Code" HorizontalOptions="Center" SelectedIndexChanged="SuPickerSubjectgetIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Sheet1</x:String>
+                            <x:String>Sheet2</x:String>
+                            <x:String>Sheet3</x:String>
+                            <x:String>Sheet4</x:String>
+                            <x:String>Sheet5</x:String>
+                            <x:String>Sheet6</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button BackgroundColor="#00ee76" TextColor="#3b2f2f" Text="Add Student" x:Name="addStudent" Clicked="addStudent_Clicked"  CornerRadius="20"/>
+                <Button BackgroundColor="#bf94e4" TextColor="#fffafa" Text="Show All Student" x:Name="showStudent" Clicked="showStudent_Clicked"  CornerRadius="20"/>
+                <Button BackgroundColor="#292BE8" Text="Bar" Clicked="BarPageOnClicked" CornerRadius="20" />
+                <Button BackgroundColor="#c80815" Text="Logout" Clicked="logoutOnClicked" Margin="0,20,15,5" CornerRadius="20" />
+            </StackLayout>
+            <StackLayout>
+                <Picker x:Name="myPicker" Title="Select a monkey"/>
+                <Label x:Name="lbljson" />
+                <Button BackgroundColor="#292BE8" Text="JSON" Clicked="jsonOnClicked" CornerRadius="20" />
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
