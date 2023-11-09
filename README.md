@@ -1,5 +1,6 @@
 # Neivce_admin
 
+change 
 BarList.xaml update
 
 <?xml version="1.0" encoding="utf-8" ?>
@@ -80,3 +81,32 @@ public partial class BarList : ContentPage
 		infolistview.ItemsSource = infob;
 	}
 }
+
+Dashboard.xaml
+ <StackLayout IsVisible="false">
+	<Picker x:Name="myPicker" Title="Select a monkey"/>
+	<Label x:Name="lbljson" />
+	<Button BackgroundColor="#292BE8" Text="JSON" Clicked="jsonOnClicked" CornerRadius="20" />
+    </StackLayout>
+</VerticalStackLayout>
+
+Dashboard.xaml.cs
+private async void jsonOnClicked(object sender, EventArgs e)
+	{
+		var data = await AdminUpLoServices.Getdataconv();
+		var json = JsonConvert.SerializeObject(data);
+		List<AdminModel> firebaseItems = JsonConvert.DeserializeObject<List<AdminModel>>(json);
+		PopulateEditor(firebaseItems);
+	}
+
+	private void PopulateEditor(List<AdminModel> firebaseItems)
+	{
+		foreach (var item in firebaseItems)
+		{
+			DisplayAlert("Alert", item.Key, "OK");
+			//lbljson.Text += item.Key;
+			string gettest = item.Key;
+			List<string> stringList = new List<string> { gettest };
+			myPicker.ItemsSource = stringList;
+		}
+	}
