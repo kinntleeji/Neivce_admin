@@ -22,7 +22,7 @@ public partial class Dashboard : ContentPage
 	private string getcode;
 	private string getadsub;
 	private Timer timer;
-	private bool isActionExecuted = false;
+	//private bool isActionExecuted = false;
 
 	public Dashboard(string TeacherName, string PasswordT, string selected)
 	{
@@ -168,15 +168,17 @@ public partial class Dashboard : ContentPage
 		PopulateEditor(firebaseItems);
 	}
 
+	List<string> stringList = new List<string> ();
+
 	private void PopulateEditor(List<AdminModel> firebaseItems)
 	{
 		foreach (var item in firebaseItems)
 		{
-			DisplayAlert("Alert", item.Key, "OK");
-			lbljson.Text += item.Key;
+			//lbljson.Text += item.Key;
 			string gettest = item.Key;
-			List<string> stringList = new List<string> { gettest };
-			myPicker.ItemsSource = stringList;
+			stringList.Add(gettest);
 		}
+		myPicker.ItemsSource = stringList;
+
 	}
 }

@@ -24,59 +24,59 @@
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 1: " />
-                                    <Label Text="{Binding week[0]}" />
+                                    <Label Text="{Binding week1}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 2: " />
-                                    <Label Text="{Binding week[1]}" />
+                                    <Label Text="{Binding week2}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 3: " />
-                                    <Label Text="{Binding week[2]}" />
+                                    <Label Text="{Binding week3}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 4: " />
-                                    <Label Text="{Binding week[3]}" />
+                                    <Label Text="{Binding week4}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 5: " />
-                                    <Label Text="{Binding week[4]}" />
+                                    <Label Text="{Binding week5}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 6: " />
-                                    <Label Text="{Binding week[5]}" />
+                                    <Label Text="{Binding week6}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 7: " />
-                                    <Label Text="{Binding week[6]}" />
+                                    <Label Text="{Binding week7}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 8: " />
-                                    <Label Text="{Binding week[7]}" />
+                                    <Label Text="{Binding week8}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 9: " />
-                                    <Label Text="{Binding week[8]}" />
+                                    <Label Text="{Binding week9}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 10: " />
-                                    <Label Text="{Binding week[9]}" />
+                                    <Label Text="{Binding week10}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 11: " />
-                                    <Label Text="{Binding week[10]}" />
+                                    <Label Text="{Binding week11}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 12: " />
-                                    <Label Text="{Binding week[11]}" />
+                                    <Label Text="{Binding week12}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 13: " />
-                                    <Label Text="{Binding week[12]}" />
+                                    <Label Text="{Binding week13}" />
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Week 14: " />
-                                    <Label Text="{Binding week[13]}" />
+                                    <Label Text="{Binding week14}" />
                                 </StackLayout>
                                 <BoxView HeightRequest="1" Color="Gray" />
 

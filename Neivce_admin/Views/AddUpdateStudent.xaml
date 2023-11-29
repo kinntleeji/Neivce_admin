@@ -7,20 +7,20 @@
         <StackLayout>
             <Entry Placeholder="Student ID" Text="{Binding AdminDetail.StudentID}" />
             <Entry Placeholder="English Name" Text="{Binding AdminDetail.EnglishName}"  />
-            <Entry Placeholder="Week 1" Text="{Binding AdminDetail.week[0]}"  />
-            <Entry Placeholder="Week 2" Text="{Binding AdminDetail.week[1]}"  />
-            <Entry Placeholder="Week 3" Text="{Binding AdminDetail.week[2]}"  />
-            <Entry Placeholder="Week 4" Text="{Binding AdminDetail.week[3]}"  />
-            <Entry Placeholder="Week 5" Text="{Binding AdminDetail.week[4]}"  />
-            <Entry Placeholder="Week 6" Text="{Binding AdminDetail.week[5]}"  />
-            <Entry Placeholder="Week 7" Text="{Binding AdminDetail.week[6]}"  />
-            <Entry Placeholder="Week 8" Text="{Binding AdminDetail.week[7]}"  />
-            <Entry Placeholder="Week 9" Text="{Binding AdminDetail.week[8]}"  />
-            <Entry Placeholder="Week 10" Text="{Binding AdminDetail.week[9]}"  />
-            <Entry Placeholder="Week 11" Text="{Binding AdminDetail.week[10]}"  />
-            <Entry Placeholder="Week 12" Text="{Binding AdminDetail.week[11]}"  />
-            <Entry Placeholder="Week 13" Text="{Binding AdminDetail.week[12]}"  />
-            <Entry Placeholder="Week 14" Text="{Binding AdminDetail.week[13]}"  />
+            <Entry Placeholder="Week 1" Text="{Binding AdminDetail.week1}"  />
+            <Entry Placeholder="Week 2" Text="{Binding AdminDetail.week2}"  />
+            <Entry Placeholder="Week 3" Text="{Binding AdminDetail.week3}"  />
+            <Entry Placeholder="Week 4" Text="{Binding AdminDetail.week4}"  />
+            <Entry Placeholder="Week 5" Text="{Binding AdminDetail.week5}"  />
+            <Entry Placeholder="Week 6" Text="{Binding AdminDetail.week6}"  />
+            <Entry Placeholder="Week 7" Text="{Binding AdminDetail.week7}"  />
+            <Entry Placeholder="Week 8" Text="{Binding AdminDetail.week8}"  />
+            <Entry Placeholder="Week 9" Text="{Binding AdminDetail.week9}"  />
+            <Entry Placeholder="Week 10" Text="{Binding AdminDetail.week10}"  />
+            <Entry Placeholder="Week 11" Text="{Binding AdminDetail.week11}"  />
+            <Entry Placeholder="Week 12" Text="{Binding AdminDetail.week12}"  />
+            <Entry Placeholder="Week 13" Text="{Binding AdminDetail.week13}"  />
+            <Entry Placeholder="Week 14" Text="{Binding AdminDetail.week14}"  />
 
             <Button Text="Save Details" Command="{Binding SaveStudentCommand}" />
         </StackLayout>

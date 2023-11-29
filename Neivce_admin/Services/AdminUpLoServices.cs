@@ -82,8 +82,22 @@ namespace Neivce_admin.Services
 				.Child("1KldxaMhsbRc1B9Hr6Z7Hw2pJldXTAZT3u-C3h-iCywE").Child(barsheet).OnceAsync<AdminModel>()).Select(item =>
 				new AdminModel
 				{
+					StudentID = item.Object.StudentID,
 					EnglishName = item.Object.EnglishName,
-					week = item.Object.week
+					week1 = item.Object.week1,
+					week2 = item.Object.week2,
+					week3 = item.Object.week3,
+					week4 = item.Object.week4,
+					week5 = item.Object.week5,
+					week6 = item.Object.week6,
+					week7 = item.Object.week7,
+					week8 = item.Object.week8,
+					week9 = item.Object.week9,
+					week10 = item.Object.week10,
+					week11 = item.Object.week11,
+					week12 = item.Object.week12,
+					week13 = item.Object.week13,
+					week14 = item.Object.week14,
 				}).ToList();
 		}
 		public static async Task writebar(string englishName, string getsheet, string getCode)

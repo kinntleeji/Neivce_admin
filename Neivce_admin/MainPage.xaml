@@ -32,13 +32,9 @@
                 <Grid
                 Padding="20,50,20,0"
                 HorizontalOptions="FillAndExpand"
-                RowSpacing="20"
+                RowSpacing="10"
                 VerticalOptions="FillAndExpand">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
@@ -83,16 +79,20 @@
                     Placeholder="Teacher Name"
                     Text="{Binding EnglishName}"
                     VerticalOptions="FillAndExpand" />
+                    
                     <Entry
+                    x:Name="entrytest"
                     Grid.Row="5"
                     HorizontalOptions="FillAndExpand"
                     IsPassword="True"
                     Placeholder="Password"
                     Text="{Binding PasswordT}"
-                    VerticalOptions="FillAndExpand" />
+                    VerticalOptions="EndAndExpand" />
 
+                    <ImageButton x:Name="imgbtnshow" Grid.Row="6" Source="hides.png" Clicked="OnsignshowClicked" MaximumHeightRequest="50" MaximumWidthRequest="50" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
+                   
                     <Button
-                     Grid.Row="6"
+                     Grid.Row="7"
                      BackgroundColor="#2196F3"
                      TextColor="#fffafa"
                      Command="{Binding LoginBtn}"

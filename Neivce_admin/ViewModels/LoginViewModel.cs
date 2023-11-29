@@ -68,6 +68,7 @@ namespace Neivce_admin.ViewModels
 
 			LoginBtn = new Command(LoginBtnTappedAsync);
 			Picker = new Command(OnPickerSelectedIndexChanged);
+
 		}
 
 		public async void OnPickerSelectedIndexChanged()

@@ -19,7 +19,7 @@ public partial class BarList : ContentPage
 		{
 			var attend = 0;
 
-			var week = info.week;
+			var week = WeekHandler.WeekList(info);
 
 			foreach (var item in week)
 			{

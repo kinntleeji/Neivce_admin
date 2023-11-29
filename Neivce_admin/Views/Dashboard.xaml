@@ -58,8 +58,7 @@
                 <Button BackgroundColor="#c80815" Text="Logout" Clicked="logoutOnClicked" Margin="0,20,15,5" CornerRadius="20" />
             </StackLayout>
             <StackLayout>
-                <Picker x:Name="myPicker" Title="Select a monkey"/>
-                <Label x:Name="lbljson" />
+                <Picker x:Name="myPicker" Title="Select Subject"/>
                 <Button BackgroundColor="#292BE8" Text="JSON" Clicked="jsonOnClicked" CornerRadius="20" />
             </StackLayout>
         </VerticalStackLayout>

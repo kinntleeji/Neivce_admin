@@ -7,6 +7,7 @@ namespace Neivce_admin
 	{
 
 		LoginViewModel loginViewModel;
+		private bool isToggled = false;
 
 		public MainPage()
 		{
@@ -18,6 +19,22 @@ namespace Neivce_admin
 		private void suCopicker_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			loginViewModel.OnPickerSelectedIndexChanged();
+		}
+		private void OnsignshowClicked(object sender, EventArgs e)
+		{
+			isToggled = !isToggled;
+
+			if (isToggled)
+			{
+				entrytest.IsPassword = false;
+				imgbtnshow.Source = "shows.png";
+			}
+
+			else
+			{
+				entrytest.IsPassword = true;
+				imgbtnshow.Source = "hides.png";
+			}
 		}
 	}
 }
