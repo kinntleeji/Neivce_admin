@@ -55,6 +55,7 @@
                 <Button BackgroundColor="#00ee76" TextColor="#3b2f2f" Text="Add Student" x:Name="addStudent" Clicked="addStudent_Clicked"  CornerRadius="20"/>
                 <Button BackgroundColor="#bf94e4" TextColor="#fffafa" Text="Show All Student" x:Name="showStudent" Clicked="showStudent_Clicked"  CornerRadius="20"/>
                 <Button BackgroundColor="#292BE8" Text="Bar" Clicked="BarPageOnClicked" CornerRadius="20" />
+                
                 <Button BackgroundColor="#c80815" Text="Logout" Clicked="logoutOnClicked" Margin="0,20,15,5" CornerRadius="20" />
             </StackLayout>
             <StackLayout>
