@@ -17,11 +17,6 @@ namespace Neivce_admin.Services
 			AuthTokenAsyncFactory = () => Task.FromResult(Setting.FireBaseSeceret)
 		});
 
-		internal static Task GetUser(Func<string> toString)
-		{
-			throw new NotImplementedException();
-		}
-
 		public async Task<bool> AddOrUpdateAdmin(AdminModel adminModel, string getsheetid)
 		{
 			if (!string.IsNullOrWhiteSpace(adminModel.StudentID))

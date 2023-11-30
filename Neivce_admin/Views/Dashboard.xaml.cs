@@ -23,6 +23,7 @@ public partial class Dashboard : ContentPage
 	private string getadsub;
 	private Timer timer;
 	//private bool isActionExecuted = false;
+	List<string> sheetlist = new List<string>();
 
 	public Dashboard(string TeacherName, string PasswordT, string selected)
 	{
@@ -63,15 +64,7 @@ public partial class Dashboard : ContentPage
 		weekpick.ItemsSource = weekList;
 		Label weekLabel = new Label();
 		weekLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: weekpick));
-		var adsuList = new List<string>();
-		adsuList.Add("Sheet1");
-		adsuList.Add("Sheet2");
-		adsuList.Add("Sheet3");
-		adsuList.Add("Sheet4");
-		adsuList.Add("Sheet5");
-		adsuList.Add("Sheet6");
-		Picker adsupicker = new Picker { Title = "Select Subject" };
-		adsupicker.ItemsSource = adsuList;
+		
 		Label adsuLabel = new Label();
 		adsuLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: adsupicker));
 
@@ -79,6 +72,19 @@ public partial class Dashboard : ContentPage
 		timer.Elapsed += TimerElapsed;
 		timer.AutoReset = false;
 		timer.Enabled = true;
+	}
+	protected override async void OnAppearing()
+	{
+		var data = await AdminUpLoServices.Getdataconv();
+		var json = JsonConvert.SerializeObject(data);
+		List<AdminModel> firebaseItems = JsonConvert.DeserializeObject<List<AdminModel>>(json);
+		foreach (var item in firebaseItems)
+		{
+			//lbljson.Text += item.Key;
+			string gettest = item.Key;
+			sheetlist.Add(gettest);
+		}
+		adsupicker.ItemsSource = sheetlist;
 	}
 	public async void OnPickerSubjectgetIndexChanged(object sender, EventArgs e)
 	{
@@ -158,27 +164,5 @@ public partial class Dashboard : ContentPage
 	private async void BarPageOnClicked(object sender, EventArgs e)
 	{
 		await App.Current.MainPage.Navigation.PushAsync(new BarList(getadsub));
-	}
-
-	private async void jsonOnClicked(object sender, EventArgs e)
-	{
-		var data = await AdminUpLoServices.Getdataconv();
-		var json = JsonConvert.SerializeObject(data);
-		List<AdminModel> firebaseItems = JsonConvert.DeserializeObject<List<AdminModel>>(json);
-		PopulateEditor(firebaseItems);
-	}
-
-	List<string> stringList = new List<string> ();
-
-	private void PopulateEditor(List<AdminModel> firebaseItems)
-	{
-		foreach (var item in firebaseItems)
-		{
-			//lbljson.Text += item.Key;
-			string gettest = item.Key;
-			stringList.Add(gettest);
-		}
-		myPicker.ItemsSource = stringList;
-
 	}
 }

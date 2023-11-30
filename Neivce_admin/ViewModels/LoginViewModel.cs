@@ -1,5 +1,7 @@
-﻿using Neivce_admin.Services;
+﻿using Neivce_admin.Models;
+using Neivce_admin.Services;
 using Neivce_admin.Views;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -52,7 +54,6 @@ namespace Neivce_admin.ViewModels
 
 		public LoginViewModel(INavigation navigation)
 		{
-			this._navigation = navigation;
 			var subcodeList = new List<string>();
 			subcodeList.Add("Sheet1");
 			subcodeList.Add("Sheet2");

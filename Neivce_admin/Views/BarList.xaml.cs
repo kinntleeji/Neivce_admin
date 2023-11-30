@@ -23,7 +23,15 @@ public partial class BarList : ContentPage
 
 			foreach (var item in week)
 			{
-				attend += Convert.ToInt16(item == "" ? -1 :item);
+				if (item.Length >= 2)
+				{
+					attend++;
+				}
+				else
+				{
+					attend += Convert.ToInt16(item == "" ? -1 : item);
+				}
+
 			}
 			
 

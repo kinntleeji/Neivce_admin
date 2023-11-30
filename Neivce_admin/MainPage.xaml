@@ -58,8 +58,11 @@
                     Text="Login in to account"
                     TextColor="#1C375C" />
                     <Label Grid.Row="2" Text="{Binding Source={x:Reference suCopicker}, Path=SelectedItem}" HorizontalOptions="Center" />
-                    <Picker x:Name="suCopicker"
-                        Title="Select Program Subject Code" Grid.Row="3" HorizontalOptions="Center" SelectedItem="{Binding selected}" SelectedIndexChanged="suCopicker_SelectedIndexChanged">
+                    <Picker x:Name="suCopicker" 
+                            Title="Select Program Subject Code" 
+                            Grid.Row="3" HorizontalOptions="Center" 
+                            SelectedItem="{Binding selected}" 
+                            SelectedIndexChanged="suCopicker_SelectedIndexChanged">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Sheet1</x:String>
@@ -71,12 +74,12 @@
                                 <x:String>Admin</x:String>
                             </x:Array>
                         </Picker.ItemsSource>
-                    </Picker>
+                    </Picker>   
                     <Entry
                     Grid.Row="4"
                     Margin="0,20,0,0"
                     HorizontalOptions="FillAndExpand"
-                    Placeholder="Teacher Name"
+                    Placeholder="User Name"
                     Text="{Binding EnglishName}"
                     VerticalOptions="FillAndExpand" />
                     
