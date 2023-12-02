@@ -1,5 +1,8 @@
-﻿using Neivce_admin.ViewModels;
+﻿using Neivce_admin.Models;
+using Neivce_admin.Services;
+using Neivce_admin.ViewModels;
 using Neivce_admin.Views;
+using Newtonsoft.Json;
 
 namespace Neivce_admin
 {
@@ -8,6 +11,7 @@ namespace Neivce_admin
 
 		LoginViewModel loginViewModel;
 		private bool isToggled = false;
+		List<string> subjlist = new List<string>();
 
 		public MainPage()
 		{
@@ -16,9 +20,22 @@ namespace Neivce_admin
 			BindingContext = loginViewModel;
 		}
 
-		private void suCopicker_SelectedIndexChanged(object sender, EventArgs e)
+		protected override async void OnAppearing()
 		{
-			loginViewModel.OnPickerSelectedIndexChanged();
+			var data = await AdminUpLoServices.Getdataconv();
+			var json = JsonConvert.SerializeObject(data);
+			List<AdminModel> firebaseItems = JsonConvert.DeserializeObject<List<AdminModel>>(json);
+			foreach (var item in firebaseItems)
+			{
+				string gettest = item.Key;
+				subjlist.Add(gettest);
+			}
+			subjpicker.ItemsSource = subjlist;
+		}
+
+		private void subjPickerSubjectgetIndexChanged(object sender, EventArgs e)
+		{
+			loginViewModel.subjPickerSubjectgetIndexChanged();
 		}
 		private void OnsignshowClicked(object sender, EventArgs e)
 		{

@@ -54,25 +54,12 @@ namespace Neivce_admin.ViewModels
 
 		public LoginViewModel(INavigation navigation)
 		{
-			var subcodeList = new List<string>();
-			subcodeList.Add("Sheet1");
-			subcodeList.Add("Sheet2");
-			subcodeList.Add("Sheet3");
-			subcodeList.Add("Sheet4");
-			subcodeList.Add("Sheet5");
-			subcodeList.Add("Sheet6");
-			subcodeList.Add("Admin");
-			Picker suCopicker = new Picker { Title = "Select Program Subject Code" };
-			suCopicker.ItemsSource = subcodeList;
-			Label monkeyNameLabel = new Label();
-			monkeyNameLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: suCopicker));
-
 			LoginBtn = new Command(LoginBtnTappedAsync);
-			Picker = new Command(OnPickerSelectedIndexChanged);
+			Picker = new Command(subjPickerSubjectgetIndexChanged);
 
 		}
 
-		public async void OnPickerSelectedIndexChanged()
+		public async void subjPickerSubjectgetIndexChanged()
 		{
 
 			await App.Current.MainPage.DisplayAlert("Alert", selected, "OK");
